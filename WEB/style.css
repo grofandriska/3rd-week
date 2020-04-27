@@ -11,8 +11,19 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    position: relative;
+
    
 }
+
+
+
+.gray-container{
+    position: absolute;
+    color: aqua;
+    width: 800px;;
+    background-color: red;
+    margin-top: 240px;}
 
 
 
