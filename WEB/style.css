@@ -23,7 +23,10 @@
     color: aqua;
     width: 800px;;
     background-color: red;
-    margin-top: 240px;}
+    margin-top: 240px;
+    opacity: 75%;
+;}
 
+#bal{background-color: salmon;}
 
-
+#jobb{background-color: salmon;}
