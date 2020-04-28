@@ -32,8 +32,8 @@ let tigerdata ={
     description:"World's most feared famous heavy tank",
 }
 
-$('#kep').attr('src', mausdata.photo);
-
-$('#photo-title').text( mausdata.title);
-
-$('#photo-description').text( mausdata.description);
+let currentPhoto = 1;
+let imagesData = [data,pantherdata];
+$('#kep').attr('src', imagesData[currentPhoto].photo);
+$('#photo-title').text( imagesData[currentPhoto].title);
+$('#photo-description').text(imagesData[currentPhoto].description);
