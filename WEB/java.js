@@ -65,13 +65,13 @@ $('#bal').click(() => {
   
   
   
-  
-  
-  let data = [Jagdpanzer.photo, pantherdata.photo, mausdata.photo,panzer4data.photo,tigerdata.photo];
 
- data.forEach((item, index) => {
-    $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
-    $('.box').click((event) => {
+ 
+   imagesData.forEach((item, index) => {
+    $('#container').append(`<img class="box" src="${item.photo}">`);
+    
+    
+$('.box').click((event) => {
       let indexClicked = $(event.target).attr('data-index');
       // indexClicked is now a string! if you need it as a number you have to change it
       // because for example "1" + 1 is going to be "11" and not 2
