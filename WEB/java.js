@@ -25,14 +25,15 @@ let tigerdata ={
     title:"Tiger ",
     description:"World's most feared famous heavy tank",
 }
-let currentPhoto = 2;
+let currentPhoto = 1;
+
 let imagesData = [data,pantherdata,mausdata,panzer4data,tigerdata];
 
 let loadPhoto = (photoNumber) => {
     $('#kep').attr('src', imagesData[photoNumber].photo); }
  loadPhoto(currentPhoto)
 
-let loadtitle = (photoNumber) => {
+ let loadtitle = (photoNumber) => {
         $('#photo-title').text(imagesData[photoNumber].title)}
 loadtitle(currentPhoto)
 
@@ -40,20 +41,21 @@ let loaddescription = (photoNumber) => {
         $('#photo-description').text(imagesData[photoNumber].description)}
 loaddescription(currentPhoto)
 
+
+
 $('#jobb').click(() => {
     currentPhoto++;
-    loadPhoto(currentPhoto);
-    if(currentPhoto < 4) { 
-        currentPhoto++; 
-      }
-  })
+    loadPhoto(currentPhoto),
+    loadtitle(currentPhoto),
+    loaddescription(currentPhoto)})
 
   $('#bal').click(() => {
-    currentPhoto--;
-    loadPhoto(currentPhoto);
-    if(currentPhoto > 1) {
-        currentPhoto--;  
-      }
-  })
+    currentPhoto--; if(currentPhoto > 1) {
+        currentPhoto--;}
+    loadPhoto(currentPhoto),
+    loadtitle(currentPhoto),
+    loaddescription(currentPhoto)})
+
+   
 
   
