@@ -30,3 +30,26 @@
 #bal{background-color: salmon;}
 
 #jobb{background-color: salmon;}
+
+#container {
+    display: flex;
+    margin-left: auto;
+    margin-right:auto ;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background: lime;
+
+  }
+
+  .clicked { display: flex;
+    margin-left: auto;
+    margin-right:auto ;
+    align-items: center;
+    justify-content: center;}

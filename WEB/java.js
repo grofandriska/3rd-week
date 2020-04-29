@@ -1,4 +1,4 @@
-let data = {
+let Jagdpanzer = {
     photo: 'Images/21.jpg',
     title : "Jagdpanzer 4",
     description : "Famous german tank destroyer from the 2ndWW area"
@@ -27,18 +27,21 @@ let tigerdata ={
 }
 let currentPhoto = 1 ;
 
-let imagesData = [data,pantherdata,mausdata,panzer4data,tigerdata];
+let imagesData = [Jagdpanzer,pantherdata,mausdata,panzer4data,tigerdata];
 
 let loadPhoto = (photoNumber) => {
-    $('#kep').attr('src', imagesData[photoNumber].photo); }
+    $('#kep').attr('src', imagesData[photoNumber].photo); 
+}
    loadPhoto(currentPhoto)
 
  let loadtitle = (photoNumber) => {
-        $('#photo-title').text(imagesData[photoNumber].title)}
-loadtitle(currentPhoto)
+        $('#photo-title').text(imagesData[photoNumber].title)
+    }
+    loadtitle(currentPhoto)
 
 let loaddescription = (photoNumber) => {
-        $('#photo-description').text(imagesData[photoNumber].description)}
+        $('#photo-description').text(imagesData[photoNumber].description)
+    }
 loaddescription(currentPhoto)
 
 
@@ -59,3 +62,21 @@ $('#bal').click(() => {
     loadtitle(currentPhoto),
     loaddescription(currentPhoto);
   });
+  
+  let data = ["first", "second", "third"];
+
+
+
+
+
+  data.forEach((item, index) => {
+  $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
+  $('.box').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    // indexClicked is now a string! if you need it as a number you have to change it
+    // because for example "1" + 1 is going to be "11" and not 2
+    let numberIndex = parseInt(indexClicked);
+    // now numberIndex is a number
+    $('#clicked').text(data[indexClicked]);
+  });
+});
