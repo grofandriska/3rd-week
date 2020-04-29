@@ -42,27 +42,6 @@ let loaddescription = (photoNumber) => {
 loaddescription(currentPhoto)
 
 
-
-/*$('#jobb').click(() => {
-    currentPhoto++;
-    loadPhoto(currentPhoto),
-    loadtitle(currentPhoto),
-    loaddescription(currentPhoto)
-    loadCurrent(currentPhoto)
-    
-    ;
-})
-
-  $('#bal').click(() => {
-    currentPhoto--;
-    loadPhoto(currentPhoto),
-    loadtitle(currentPhoto),
-    loaddescription(currentPhoto)
-    loadCurrent(currentPhoto);
-})
-
-*/
-
 $('#bal').click(() => {
     if(currentPhoto > 0) {
       currentPhoto--;  
