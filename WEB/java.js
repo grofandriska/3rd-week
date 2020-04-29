@@ -52,7 +52,7 @@ $('#bal').click(() => {
   });
 
   $('#jobb').click(() => {
-    if(currentPhoto < 5) { 
+    if(currentPhoto < 4) { 
       currentPhoto++; 
     }
     loadPhoto(currentPhoto),
