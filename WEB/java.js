@@ -63,7 +63,13 @@ $('#bal').click(() => {
     loaddescription(currentPhoto);
   });
   
-  imagesData.forEach((item, index) => {
+  
+  
+  
+  
+  let data = [Jagdpanzer.photo, pantherdata.photo, mausdata.photo,panzer4data.photo,tigerdata.photo];
+
+ data.forEach((item, index) => {
     $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
     $('.box').click((event) => {
       let indexClicked = $(event.target).attr('data-index');
@@ -71,7 +77,7 @@ $('#bal').click(() => {
       // because for example "1" + 1 is going to be "11" and not 2
       let numberIndex = parseInt(indexClicked);
       // now numberIndex is a number
-      $('#clicked').text(imagesData[indexClicked]);
+      $('#clicked').text(data[indexClicked]);
     });
   });
   
