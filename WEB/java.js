@@ -63,10 +63,7 @@ $('#bal').click(() => {
     loaddescription(currentPhoto);
   });
   
-  let data = ["first", "second", "third"];
-
-
-
+  let data = ["first", "second", "third"];/* ????*/
 
   imagesData.forEach((item, index) => {
   $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
@@ -74,7 +71,7 @@ $('#bal').click(() => {
  
  
   $('.box').click((event) => {
-    let indexClicked = $(event.target).attr('data-index');
+    let indexClicked = $(event.target).attr(imagesData.photo);
     // indexClicked is now a string! if you need it as a number you have to change it
     // because for example "1" + 1 is going to be "11" and not 2
     let numberIndex = parseInt(indexClicked);
