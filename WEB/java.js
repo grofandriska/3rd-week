@@ -68,9 +68,11 @@ $('#bal').click(() => {
 
 
 
-
-  data.forEach((item, index) => {
+  imagesData.forEach((item, index) => {
   $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
+ 
+ 
+ 
   $('.box').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     // indexClicked is now a string! if you need it as a number you have to change it
