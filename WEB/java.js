@@ -56,9 +56,4 @@ $('#jobb').click(() => {
       }
   })
 
-  let current = 0;
-
-let loadCurrent = (currentPhoto) => {
-  $('#photo-title').text(currentPhoto);
-}
- 
+  
