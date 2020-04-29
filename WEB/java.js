@@ -31,7 +31,7 @@ let imagesData = [data,pantherdata,mausdata,panzer4data,tigerdata];
 
 let loadPhoto = (photoNumber) => {
     $('#kep').attr('src', imagesData[photoNumber].photo); }
- loadPhoto(currentPhoto)
+   loadPhoto(currentPhoto)
 
  let loadtitle = (photoNumber) => {
         $('#photo-title').text(imagesData[photoNumber].title)}
@@ -43,39 +43,40 @@ loaddescription(currentPhoto)
 
 
 
-$('#jobb').click(() => {
+/*$('#jobb').click(() => {
     currentPhoto++;
+    loadPhoto(currentPhoto),
+    loadtitle(currentPhoto),
+    loaddescription(currentPhoto)
+    loadCurrent(currentPhoto)
+    
+    ;
+})
+
+  $('#bal').click(() => {
+    currentPhoto--;
     loadPhoto(currentPhoto),
     loadtitle(currentPhoto),
     loaddescription(currentPhoto)
     loadCurrent(currentPhoto);
 })
 
- /* $('#bal').click(() => {
-    currentPhoto--;
-    loadPhoto(currentPhoto),
-    loadtitle(currentPhoto),
-    loaddescription(currentPhoto)
-    loadCurrent(currentPhoto);
-})*/
-
-let current = 0;
-
-let loadCurrent = (number) => {
-  $('#current').text(number);
-}
+*/
 
 $('#bal').click(() => {
-    if(current > 1) {
-      current--;  
+    if(currentPhoto > 0) {
+      currentPhoto--;  
     }
-    loadCurrent(current);
-  })
-  
+    loadPhoto(currentPhoto),
+    loadtitle(currentPhoto),
+    loaddescription(currentPhoto);
+  });
 
-        /*$('#next').click(() => {
-            if(current < 5) { 
-              current++; 
-            }
-            loadCurrent(current);
-          });*/
+  $('#jobb').click(() => {
+    if(currentPhoto < 5) { 
+      currentPhoto++; 
+    }
+    loadPhoto(currentPhoto),
+    loadtitle(currentPhoto),
+    loaddescription(currentPhoto);
+  });
