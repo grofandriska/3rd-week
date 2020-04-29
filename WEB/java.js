@@ -21,32 +21,21 @@ let panzer4data ={
     description:"Most produced german medium tank",
 }
 let tigerdata ={
-    photo:'Images/TigerITunis.jpg',
+    photo:'Images/Tiger.jpg',
     title:"Tiger ",
     description:"World's most feared famous heavy tank",
 }
-
-
-
-
-
-
-
-let currentPhoto = 0;
+let currentPhoto = 2;
 let imagesData = [data,pantherdata,mausdata,panzer4data,tigerdata];
 
 let loadPhoto = (photoNumber) => {
     $('#kep').attr('src', imagesData[photoNumber].photo); }
  loadPhoto(currentPhoto)
 
-    
-    
 let loadtitle = (photoNumber) => {
         $('#photo-title').text(imagesData[photoNumber].title)}
 loadtitle(currentPhoto)
 
-    
-    
 let loaddescription = (photoNumber) => {
         $('#photo-description').text(imagesData[photoNumber].description)}
 loaddescription(currentPhoto)
@@ -67,4 +56,9 @@ $('#jobb').click(() => {
       }
   })
 
-  
+  let current = 0;
+
+let loadCurrent = (currentPhoto) => {
+  $('#photo-title').text(currentPhoto);
+}
+ 
