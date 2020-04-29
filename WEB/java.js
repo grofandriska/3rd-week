@@ -68,7 +68,7 @@ $('#bal').click(() => {
 
 
    imagesData.forEach((item, index) => {
-    $('#container').append(`<img class="box" src="${item.photo}">`)
+    $('#container').append(`<img class="box" src="${item.photo}">`);
     
     
 $('.box').click((event) => {
@@ -81,18 +81,18 @@ $('.box').click((event) => {
       
       $('#clicked').text(data[indexClicked]);
     });
-  });
+  })
   
-
-
-
 /*
    imagesData.forEach((item, index) => {
-  $('#container').append('<div class="box" data-index="${index}"><img class="box" src="${item.photo}"></div>')
+  $('#container').append('<div class="box" data-index="${index}"><img class="box" src="${item.photo}"></div>') 
  
   $('.box').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     let numberIndex = parseInt(indexClicked);
     loadPhoto(numberIndex);
     $('#clicked').text(data[indexClicked]);
-  }); */
+  });
+})
+
+*/
