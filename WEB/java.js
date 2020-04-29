@@ -25,7 +25,7 @@ let tigerdata ={
     title:"Tiger ",
     description:"World's most feared famous heavy tank",
 }
-let currentPhoto = 1;
+let currentPhoto = 1 ;
 
 let imagesData = [data,pantherdata,mausdata,panzer4data,tigerdata];
 
@@ -47,15 +47,35 @@ $('#jobb').click(() => {
     currentPhoto++;
     loadPhoto(currentPhoto),
     loadtitle(currentPhoto),
-    loaddescription(currentPhoto)})
+    loaddescription(currentPhoto)
+    loadCurrent(currentPhoto);
+})
 
-  $('#bal').click(() => {
-    currentPhoto--; if(currentPhoto > 1) {
-        currentPhoto--;}
+ /* $('#bal').click(() => {
+    currentPhoto--;
     loadPhoto(currentPhoto),
     loadtitle(currentPhoto),
-    loaddescription(currentPhoto)})
+    loaddescription(currentPhoto)
+    loadCurrent(currentPhoto);
+})*/
 
-   
+let current = 0;
 
+let loadCurrent = (number) => {
+  $('#current').text(number);
+}
+
+$('#bal').click(() => {
+    if(current > 1) {
+      current--;  
+    }
+    loadCurrent(current);
+  })
   
+
+        /*$('#next').click(() => {
+            if(current < 5) { 
+              current++; 
+            }
+            loadCurrent(current);
+          });*/
